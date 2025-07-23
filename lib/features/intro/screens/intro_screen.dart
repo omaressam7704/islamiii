@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/theme/app_Colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:islami/features/home/screens/home_page.dart';
+import 'package:islami/features/home/screens/homepagescreen.dart';
 
 class IntroScreen extends StatefulWidget {
   static const String route = "/intro";
@@ -30,11 +30,27 @@ class _IntroScreenState extends State<IntroScreen> {
               });
             },
             children: [
-              buildPage(image: "assets/images/intro1.png", title: "Welcome To Islami App"),
-              buildPage(image: "assets/images/intro2.png", title: "Welcome To Islami", description: "We Are Very Excited To Have You In Our Community"),
-              buildPage(image: "assets/images/intro3.png", title: "Reading the Quran", description: "Read, and your Lord is the Most Generous"),
-              buildPage(image: "assets/images/intro4.png", title: "Bearish", description: "Praise the name of your Lord, the Most High"),
-              buildPage(image: "assets/images/intro5.png", title: "Holy Quran Radio", description: "You can listen to the Holy Quran Radio through the application for free and easily"),
+              buildPage(
+                  image: "assets/images/intro1.png",
+                  title: "Welcome To Islami App"),
+              buildPage(
+                  image: "assets/images/intro2.png",
+                  title: "Welcome To Islami",
+                  description:
+                      "We Are Very Excited To Have You In Our Community"),
+              buildPage(
+                  image: "assets/images/intro3.png",
+                  title: "Reading the Quran",
+                  description: "Read, and your Lord is the Most Generous"),
+              buildPage(
+                  image: "assets/images/intro4.png",
+                  title: "Bearish",
+                  description: "Praise the name of your Lord, the Most High"),
+              buildPage(
+                  image: "assets/images/intro5.png",
+                  title: "Holy Quran Radio",
+                  description:
+                      "You can listen to the Holy Quran Radio through the application for free and easily"),
             ],
           ),
 
@@ -47,7 +63,11 @@ class _IntroScreenState extends State<IntroScreen> {
               child: SmoothPageIndicator(
                 controller: _controller,
                 count: 5,
-                effect: ExpandingDotsEffect(activeDotColor: Colors.amber, dotColor: Colors.white54, dotHeight: 10, dotWidth: 10),
+                effect: ExpandingDotsEffect(
+                    activeDotColor: Colors.amber,
+                    dotColor: Colors.white54,
+                    dotHeight: 10,
+                    dotWidth: 10),
               ),
             ),
           ),
@@ -64,22 +84,29 @@ class _IntroScreenState extends State<IntroScreen> {
                 TextButton(
                   onPressed: () {
                     if (_controller.page! > 0) {
-                      _controller.previousPage(duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                      _controller.previousPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOut);
                     }
                   },
-                  child: const Text("Back", style: TextStyle(color: Colors.white70)),
+                  child: const Text("Back",
+                      style: TextStyle(color: Colors.white70)),
                 ),
 
                 // Next / Finish button
                 TextButton(
                   onPressed: () {
                     if (isLastPage) {
-                      Navigator.pushReplacementNamed(context, HomePage.route);
+                      Navigator.pushReplacementNamed(
+                          context, HomePageScreen.route);
                     } else {
-                      _controller.nextPage(duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+                      _controller.nextPage(
+                          duration: const Duration(milliseconds: 500),
+                          curve: Curves.easeInOut);
                     }
                   },
-                  child: Text(isLastPage ? "Finish" : "Next", style: const TextStyle(color: Colors.amber)),
+                  child: Text(isLastPage ? "Finish" : "Next",
+                      style: const TextStyle(color: Colors.amber)),
                 ),
               ],
             ),
@@ -89,7 +116,8 @@ class _IntroScreenState extends State<IntroScreen> {
     );
   }
 
-  Widget buildPage({required String image, required String title, String? description}) {
+  Widget buildPage(
+      {required String image, required String title, String? description}) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -97,10 +125,17 @@ class _IntroScreenState extends State<IntroScreen> {
         children: [
           Image.asset(image, height: 250),
           const SizedBox(height: 20),
-          Text(title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.amber), textAlign: TextAlign.center),
+          Text(title,
+              style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.amber),
+              textAlign: TextAlign.center),
           if (description != null) ...[
             const SizedBox(height: 10),
-            Text(description, style: const TextStyle(fontSize: 16, color: Colors.white70), textAlign: TextAlign.center),
+            Text(description,
+                style: const TextStyle(fontSize: 16, color: Colors.white70),
+                textAlign: TextAlign.center),
           ],
         ],
       ),

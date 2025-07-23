@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami/features/home/screens/home_page.dart';
+import 'package:islami/features/home/screens/homepagescreen.dart';
 import 'package:islami/features/intro/screens/intro_screen.dart';
 import 'package:islami/features/splash/screens/splash_page.dart';
+import 'package:islami/features/home/screens/hadithscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashPage.route: (context) => const SplashPage(),
         IntroScreen.route: (context) => const IntroScreen(),
-        HomePage.route: (context) => const HomePage(),
+        HomePageScreen.route: (context) => const HomePageScreen(),
+        HadithScreen.route: (context) => const HadithScreen(),
       },
     );
   }
