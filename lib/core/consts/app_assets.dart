@@ -13,7 +13,10 @@ abstract class AppAssets {
   static String homeBg = "assets/images/homeBg.png";
   static String Islami = "assets/images/Islami.png";
   static String Mos = "assets/images/Mosque-01.png";
-
-
-
+  static String recentIMG = "assets/images/recentIMG.png";
+  static String surahNO = "assets/images/surahNO.png";
+  static String sura_left_corner = "assets/images/sura_left_corner.png";
+  static String sura_right_corner = "assets/images/sura_right_corner.png";
+  static String sura_bottom_decoration =
+      'assets/images/sura_bottom_decoration.png';
 }

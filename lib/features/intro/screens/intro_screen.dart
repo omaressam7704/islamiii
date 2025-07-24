@@ -101,7 +101,7 @@ class _IntroScreenState extends State<IntroScreen> {
                           context, HomePageScreen.route);
                     } else {
                       _controller.nextPage(
-                          duration: const Duration(milliseconds: 500),
+                          duration: const Duration(milliseconds: 50),
                           curve: Curves.easeInOut);
                     }
                   },
