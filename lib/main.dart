@@ -3,6 +3,7 @@ import 'package:islami/features/home/screens/homepagescreen.dart';
 import 'package:islami/features/intro/screens/intro_screen.dart';
 import 'package:islami/features/splash/screens/splash_page.dart';
 import 'package:islami/features/home/screens/hadithscreen.dart';
+import 'package:islami/features/home/screens/radioscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         IntroScreen.route: (context) => const IntroScreen(),
         HomePageScreen.route: (context) => const HomePageScreen(),
         HadithScreen.route: (context) => const HadithScreen(),
+        RadioScreen.route: (context) => const RadioScreen(),
       },
     );
   }

@@ -39,6 +39,9 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   carousel_slider: ^5.1.1
   http: ^1.4.0
+  audioplayers: ^6.5.0
+  intl: ^0.18.1
+  flutter_timer_countdown: ^1.0.4
 
 dev_dependencies:
   flutter_test:

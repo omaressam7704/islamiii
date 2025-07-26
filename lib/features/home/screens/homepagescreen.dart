@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/consts/app_assets.dart';
 import 'package:islami/core/theme/app_Colors.dart';
+import 'package:islami/features/home/screens/radioscreen.dart';
+import 'package:islami/features/home/screens/timescreen.dart';
 import 'hadithscreen.dart';
 import 'bottomnavbar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -195,9 +197,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
     // Replace with your actual screens
     HomeScreen(), // Example placeholder
     const HadithScreen(),
-    const Center(child: Text('Radio')),
     const Center(child: Text('More')),
-    const Center(child: Text('Time')),
+    const RadioScreen(),
+    const TimeScreen(),
   ];
 
   void _onItemTapped(int index) {
