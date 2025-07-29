@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:audioplayers/audioplayers.dart';
+import 'package:islami/core/consts/app_assets.dart';
 
 class RadioScreen extends StatefulWidget {
   static const String route = "/radio";
@@ -74,11 +75,10 @@ class _RadioScreenState extends State<RadioScreen>
                 Stack(
                   alignment: Alignment.center,
                   children: [
-                    Image.asset("assets/images/radio_bg.png",
+                    Image.asset(AppAssets.Mos,
                         width: double.infinity, height: 200, fit: BoxFit.cover),
                     Positioned(
-                      child: Image.asset("assets/images/header_mosque.png",
-                          width: 100),
+                      child: Image.asset(AppAssets.Islami, width: 100),
                     ),
                   ],
                 ),

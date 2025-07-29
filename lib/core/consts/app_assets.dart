@@ -19,4 +19,6 @@ abstract class AppAssets {
   static String sura_right_corner = "assets/images/sura_right_corner.png";
   static String sura_bottom_decoration =
       'assets/images/sura_bottom_decoration.png';
+  static String morning = "assets/images/morning.png";
+  static String evening = "assets/images/evening.png";
 }

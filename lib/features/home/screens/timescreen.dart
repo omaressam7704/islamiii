@@ -4,6 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_timer_countdown/flutter_timer_countdown.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:islami/core/consts/app_assets.dart';
+
+import 'package:islami/core/consts/app_assets.dart';
 
 class TimeScreen extends StatefulWidget {
   static const String route = "/time";
@@ -84,7 +87,7 @@ class _TimeScreenState extends State<TimeScreen> {
             Center(
               child: Column(
                 children: [
-                  Image.asset("assets/images/islami_logo.png", height: 80),
+                  Image.asset(AppAssets.Mos, height: 80),
                 ],
               ),
             ),
@@ -224,13 +227,11 @@ class _TimeScreenState extends State<TimeScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child: _buildAzkarCard(
-                        "Evening Azkar", "assets/images/evening.png"),
+                    child: _buildAzkarCard("Evening Azkar", AppAssets.evening),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: _buildAzkarCard(
-                        "Morning Azkar", "assets/images/morning.png"),
+                    child: _buildAzkarCard("Morning Azkar", AppAssets.morning),
                   ),
                 ],
               ),
